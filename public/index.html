@@ -24,13 +24,23 @@
   <div id="app">
 
     <main data-flex-splitter-horizontal style="flex: auto;">
-      <div style="min-width: 200px;">
-
+      <div style="min-width: 300px;">
+        <div id="header">
+          <div>NC</div>
+          <div>
+          </div>
+        </div>
         <div data-flex-splitter-vertical style="flex: auto;">
-          <div style="height: 50%;overflow-y:scroll;">
+          <div style="height: calc(50% - 50px);overflow-y:scroll;">
             <div id="library">
               <div class="label">Library</div>
+              <div class="library_tabs">
+                <button type="button" class="active" id="attire">Attire</button>
+                <button type="button" id="decals">Decals</button>
+              </div>
               <div id="library_content"></div>
+              <div style="display:none;" id="decals_content">
+              </div>
             </div>
           </div>
 
@@ -46,15 +56,19 @@
 
       </div>
       <div role="separator"></div>
-      <div style="flex: auto;">
+      <div style="flex: auto; position: relative;">
         <div id="renderer">
           <canvas></canvas>
+        </div>
+        <div id="export">
+          <canvas id="exportA"></canvas>
         </div>
       </div>
     </main>
 
   </div>
   <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
+  <script src="https://rawgit.com/akhilsahu/saveSvgAsPngJpgSvg/master/svg.js"></script>
   <script src="../dist/bundle.js"></script>
 </body>
 

@@ -15,7 +15,6 @@ body {
 html, body {
     width: 100%;
     height: 100%;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 summary {
@@ -26,6 +25,18 @@ summary {
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+#header {
+    width: 100;
+    height: 50px;
+    background: #DDD;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6px;
 }
 
 #test {
@@ -39,6 +50,26 @@ summary {
     height: 100%;
 }
 
+#export {
+    width: 100%;
+    height: 100%;
+    background: hotpink;
+}
+
+#exportA {
+    width: 100%;
+    height: 100%;
+}
+
+/** Details **/
+details > summary {
+  list-style: none;
+  padding: 0 4px;
+}
+details summary::-webkit-details-marker {
+  display:none;
+}
+
 /** Library **/
 
 #library {
@@ -49,6 +80,29 @@ summary {
     width: 100%;
     background: #333;
     color: #EEE;
+}
+
+.library_tabs {
+    width: 100%;
+    background: #DDD;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #444;
+}
+
+.library_tabs button {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: 1px solid #444;
+    background: #DDD;
+    cursor: pointer;
+    margin: 0;
+    padding: 4px 6px;
+}
+
+.library_tabs button.active {
+    background: #444;
+    color: #FFF;
 }
 
 #library_content {
@@ -66,6 +120,20 @@ summary {
     align-items: center;
     justify-content: space-between;
     padding: 4px;
+}
+
+/** Decals **/
+
+.decal_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.snapButton.active {
+    background: dodgerblue;
+    color: white;
 }
 
 /** Nodes **/
@@ -86,6 +154,8 @@ summary {
     justify-content: space-between;
     align-items: center;
     padding: 0 4px;
+    background: #DDD;
+    border-bottom: 1px solid #222;
 }
 .node.active .label {
     background: dodgerblue;
@@ -107,7 +177,6 @@ summary {
 }
 
 /** Visibility Toggle **/
-
 .node.active .label .toggle i {
     color: #FFF;
 }
@@ -118,4 +187,27 @@ summary {
 }
 .toggle i.mdi{
  cursor: pointer;
+}
+
+/* Node param controls */
+
+.node_param {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.picker {
+    position: relative
+}
+.Scp-hue {
+    float: none !important;
+    position: absolute !important;
+    top: 0;
+    right: 0;
+}
+.filter {
+    width: 540px;
+    height: 540px;
+    overflow-y: auto
 }
